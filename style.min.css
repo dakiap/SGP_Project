@@ -1,0 +1,61 @@
+body,h1{
+    margin:0;
+    padding:0
+}
+
+h1{
+    text-transform:uppercase
+}
+
+body{
+    background-image: url('image11.jpg');
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.fix:after{
+    display:table;
+    clear:both;
+    content:''
+}
+
+.wrap{
+    width:960px;
+    margin:0 auto;
+    padding:40px 0;
+    text-align:center;
+    position:relative
+}
+
+#gameArea,.logo{
+    /* background-color: ; */
+    margin-bottom:40px;
+    margin-left: 187px;
+    border: 2px solid #b3b4b9;
+    border-radius: 8px;
+    background-image: url('Backimage.jpg');
+    width: 400px;
+}
+
+.ws-area,.ws-words{
+    font-size: 27px;
+    display:inline-block;
+    vertical-align:top
+}
+
+.ws-words{
+    margin-left:50px;
+    text-align:left;
+    border:2px solid #b3b4b9;
+    border-radius: 8px;
+    background-image: url('Backimage.jpg');
+    width: 80px;
+}
+
+.ws-word{
+    margin-bottom:4px
+}
+
+.ws-words ::first-letter{
+    text-transform:capitalize
+}

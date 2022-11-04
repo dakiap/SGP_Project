@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Game-Page</title>
+    <link rel="stylesheet" href="wordsearch.min.css" />
+    <link rel="stylesheet" href="style.min.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <h1 class="logo">Word search game</h1>
+      <section id="ws-area"></section>
+      <ul class="ws-words"></ul>
+    </div>
+    <!-- <img style="position: absolute; top: 0; right: 0; border: 0;" src="logo.jpg" alt="logo"></a> -->
+    <script src="utility.min.js"></script>
+    <script src="wordsearch.min.js"></script>
+    <script type="text/javascript">
+      var gameAreaEl = document.getElementById('ws-area');
+      var gameobj = gameAreaEl.wordSearch();
+
+      // Put words into `.ws-words`
+      var words = gameobj.settings.wordsList,
+        wordsWrap = document.querySelector('.ws-words');
+      for (i in words) {
+        var liEl = document.createElement('li');
+        liEl.setAttribute('class', 'ws-word');
+        liEl.innerText = words[i];
+        wordsWrap.appendChild(liEl);
+      }
+    </script>
+  </body>
+</html>
